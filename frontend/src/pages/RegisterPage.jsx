@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import MusicToggle from "../components/MusicToggle";
 import "../App.css";
 
 function RegisterPage() {
@@ -28,7 +27,7 @@ function RegisterPage() {
       setError("Passwords do not match.");
       return;
     }
-    // Simulazione registrazione fallita
+    // Simulate failed registration
     setError("Registration is currently disabled.");
   };
 
@@ -87,7 +86,6 @@ function RegisterPage() {
           <button className="homepage-btn" type="submit">Register</button>
         </form>
       </div>
-      {/* footer rimosso, ora globale in App.jsx */}
     </div>
   );
 }

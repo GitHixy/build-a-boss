@@ -2,7 +2,6 @@ import React from "react";
 import "../App.css";
 import logo from '/boss-logo2.svg';
 import { FaCrown, FaDragon, FaTrophy } from 'react-icons/fa';
-import MusicToggle from "../components/MusicToggle"; // Import MusicToggle component
 
 function HomePage() {
   return (
@@ -26,14 +25,14 @@ function HomePage() {
       <div className="sparkle s16" style={{left:'25%', top:'55%', zIndex:1}}></div>
       <header className="homepage-header">
         <img src={logo} alt="Build-a-Boss Logo" className="homepage-logo" />
-        <h1>Build a Boss</h1>
+        <h1>Build-a-Boss</h1>
         <p className="homepage-subtitle">
-          Create, train, and evolve your fantasy boss. <br></br>Challenge the community and climb the leaderboard!
+          Create, train, and evolve your fantasy boss. Challenge the community and climb the leaderboard!
         </p>
       </header>
       <main className="homepage-main">
         <div className="homepage-card">
-          <h2><FaDragon style={{color:'#f7c873', marginRight:8}}/> What is BaB?</h2>
+          <h2><FaDragon style={{color:'#f7c873', marginRight:8}}/> What is Build-a-Boss?</h2>
           <p>
             An asynchronous PvE simulator where you can design your own boss, program its moves, and see if other players can defeat it. The more your boss wins, the higher it climbs in the rankings!
           </p>

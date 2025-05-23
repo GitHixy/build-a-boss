@@ -22,12 +22,11 @@ export function MusicProvider({ children, src, defaultVolume = 0.18 }) {
     if (audio.paused) {
       audio.play().catch(() => {});
     }
-    return () => {
-      // Do not clean up audio on unmount (singleton)
-    };
+    // Do not clean up audio on unmount (singleton)
+    return () => {};
   }, [src, defaultVolume, volume, muted]);
 
-  // Optional: persist mute/volume in localStorage
+  // Optionally persist mute/volume in localStorage
   useEffect(() => {
     localStorage.setItem("music-muted", JSON.stringify(muted));
     localStorage.setItem("music-volume", JSON.stringify(volume));

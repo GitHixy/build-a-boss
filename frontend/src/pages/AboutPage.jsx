@@ -1,7 +1,6 @@
 import React from "react";
 import "../App.css";
 import { FaDragon } from "react-icons/fa";
-import MusicToggle from "../components/MusicToggle"; // Import MusicToggle component
 
 function AboutPage() {
   return (
@@ -36,7 +35,6 @@ function AboutPage() {
           A passionate solo developer, lover of videogames, JRPGs and MMOs.
         </p>
       </div>
-      {/* footer rimosso, ora globale in App.jsx */}
     </div>
   );
 }

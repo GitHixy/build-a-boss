@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import MusicToggle from "../components/MusicToggle"; // Assicurati che il percorso sia corretto
 import "../App.css";
 
 function LoginPage() {
@@ -14,7 +13,7 @@ function LoginPage() {
       setError("Please enter both email and password.");
       return;
     }
-    // Simulazione login fallito
+    // Simulate failed login
     setError("Invalid credentials. Please try again.");
   };
 
@@ -59,7 +58,6 @@ function LoginPage() {
           <button className="homepage-btn" type="submit">Login</button>
         </form>
       </div>
-      {/* footer rimosso, ora globale in App.jsx */}
     </div>
   );
 }

@@ -1,13 +1,14 @@
+/* Global styles */
+
 html, body, #root {
   height: 100%;
   min-height: 100%;
-  overflow-x: hidden;
 }
 
 body {
+  background-color: rgb(10, 10, 10);
   margin: 0;
-  padding: 0;
-  overflow-y: hidden;
+  padding: 0; 
 }
 
 #root {
@@ -17,49 +18,15 @@ body {
   text-align: center;
   height: 100%;
   min-height: 100%;
-  overflow: hidden;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.app-content {
+  height: 90%;
 }
 
 .homepage-container {
-  min-height: calc(100dvh - 64px);
-  height: calc(100dvh - 64px);
-  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  height: 100%;
+  background: linear-gradient(135deg, #090c0e 0%, #011529 100%);
   color: #f5f3e7;
   font-family: 'Cinzel', serif;
   display: flex;
@@ -104,6 +71,10 @@ body {
 .sparkle.s10 { animation-name: sparkle-move-10; animation-delay: 6s; }
 .sparkle.s11 { animation-name: sparkle-move-11; animation-delay: 4.7s; }
 .sparkle.s12 { animation-name: sparkle-move-12; animation-delay: 5.8s; }
+.sparkle.s13 { animation-name: sparkle-move-13; animation-delay: 2.5s; }
+.sparkle.s14 { animation-name: sparkle-move-14; animation-delay: 4.8s; }
+.sparkle.s15 { animation-name: sparkle-move-15; animation-delay: 1.1s; }
+.sparkle.s16 { animation-name: sparkle-move-16; animation-delay: 5.5s; }
 
 @keyframes sparkle-move-1 {
   0% { transform: translate(0, 0) scale(1); opacity: 0.25; }
@@ -174,26 +145,28 @@ body {
   65% { transform: translate(-8px, 18px) scale(1.1); }
   100% { transform: translate(0, 0) scale(1); }
 }
-
-/* Ornamental borders */
-.homepage-border {
-  position: absolute;
-  pointer-events: none;
-  z-index: 2;
+@keyframes sparkle-move-13 {
+  0% { transform: translate(0, 0) scale(1); }
+  35% { transform: translate(18px, -25px) scale(1.2); }
+  70% { transform: translate(-12px, 18px) scale(1.1); }
+  100% { transform: translate(0, 0) scale(1); }
 }
-.homepage-border.top {
-  top: 0; left: 0; width: 100%; height: 40px;
+@keyframes sparkle-move-14 {
+  0% { transform: translate(0, 0) scale(1); }
+  45% { transform: translate(-20px, 12px) scale(1.3); }
+  90% { transform: translate(15px, -15px) scale(1.1); }
+  100% { transform: translate(0, 0) scale(1); }
 }
-.homepage-border.bottom {
-  bottom: 0; left: 0; width: 100%; height: 40px;
-  transform: scaleY(-1);
+@keyframes sparkle-move-15 {
+  0% { transform: translate(0, 0) scale(1); }
+  30% { transform: translate(10px, 25px) scale(1.2); }
+  80% { transform: translate(-18px, -10px) scale(1.1); }
+  100% { transform: translate(0, 0) scale(1); }
 }
-.homepage-border.left {
-  top: 0; left: 0; width: 40px; height: 100%;
-  transform: scaleX(-1);
-}
-.homepage-border.right {
-  top: 0; right: 0; width: 40px; height: 100%;
+@keyframes sparkle-move-16 {
+  0% { transform: translate(0, 0) scale(1); }
+  60% { transform: translate(-15px, 18px) scale(1.3); }
+  100% { transform: translate(0, 0) scale(1); }
 }
 
 .homepage-logo {
@@ -207,18 +180,9 @@ body {
 }
 
 .homepage-header {
+  height: 5%;
   text-align: center;
   padding: 3rem 1rem 1.5rem 1rem;
-}
-
-.homepage-logo {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 1.2rem;
-  filter: drop-shadow(0 2px 12px #00000055);
-  border-radius: 50%;
-  background: #232526;
-  border: 3px solid #f7c873;
 }
 
 .homepage-header h1 {
@@ -237,6 +201,7 @@ body {
 }
 
 .homepage-main {
+  height: 80%;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -298,6 +263,9 @@ body {
 }
 
 .homepage-footer {
+  width: 100%;
+  position: sticky;
+  bottom: 0;
   text-align: center;
   padding: 1.2rem 0 0.7rem 0;
   color: #bdbdbd;
@@ -305,6 +273,44 @@ body {
   letter-spacing: 1px;
   flex-shrink: 0;
   margin-top: auto;
+  background: rgba(36, 37, 38, 0.98);
+  border-top: 2px solid #f7c873;
+  box-shadow: 0 -2px 12px 0 #00000033;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  z-index: 9;
+}
+.footer-link {
+  color: #f7c873;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Cinzel', serif;
+  font-size: 1.05em;
+  transition: color 0.18s;
+}
+.footer-link:hover {
+  color: #ffe7b3;
+}
+.footer-sep {
+  color: #bdbdbd;
+  margin: 0 0.5em;
+  font-size: 1.1em;
+  user-select: none;
+}
+@media (max-width: 700px) {
+  .homepage-footer {
+    font-size: 0.93rem;
+    padding: 0.9rem 0 0.5rem 0;
+    gap: 0.4rem;
+  }
+}
+@media (max-width: 500px) {
+  .homepage-footer {
+    font-size: 0.88rem;
+    padding: 0.7rem 0 0.3rem 0;
+  }
 }
 
 .navbar {
@@ -339,6 +345,7 @@ body {
 }
 
 .navbar-logo {
+  margin-left: 10px;
   width: 38px;
   height: 38px;
   border-radius: 50%;
@@ -354,14 +361,6 @@ body {
   letter-spacing: 1px;
   font-weight: 700;
   text-shadow: 1px 1px 0 #232526;
-}
-
-.navbar-links {
-  display: flex;
-  gap: 2.2rem;
-  list-style: none;
-  margin: 0 2rem 0 2rem;
-  padding: 0;
 }
 
 .navbar-link {
@@ -393,11 +392,12 @@ body {
 
 .about-content {
   max-width: 600px;
-  margin: 4rem auto 0 auto;
+  max-height: 500px;
+  margin: 2rem auto 0 auto;
   background: rgba(36, 37, 38, 0.97);
   border: 2px solid #f7c873;
   border-radius: 18px;
-  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  padding: 0 2.5rem 0 2.5rem;
   box-shadow: 0 6px 32px 0 #00000066, 0 0 0 4px #232526;
   text-align: left;
 }
@@ -413,7 +413,7 @@ body {
 .about-title {
   color: #f7c873;
   font-size: 2.1rem;
-  margin-bottom: 1.2rem;
+  margin: 0;
   font-family: 'Cinzel', serif;
   text-shadow: 1px 1px 0 #232526;
 }
@@ -505,15 +505,19 @@ body {
   max-width: 370px;
 }
 
+.music-toggle {
+  width: 150px;
+}
+
 .music-toggle-fixed {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
+  bottom: 10px;
+  right: 10px;
   z-index: 100;
   background: rgba(36,37,38,0.92);
   border: 2px solid #f7c873;
   border-radius: 12px;
-  padding: 0.5rem 1rem 0.5rem 0.7rem;
+  padding: 0 1rem 0 0.7rem;
   display: flex;
   align-items: center;
   gap: 0.7rem;
@@ -523,7 +527,7 @@ body {
   background: none;
   border: none;
   color: #f7c873;
-  font-size: 1.5rem;
+  font-size: 1.0rem;
   cursor: pointer;
   margin-right: 0.2rem;
   transition: color 0.18s;
@@ -532,7 +536,7 @@ body {
   color: #ffe7b3;
 }
 .music-slider {
-  width: 70px;
+  width: 60%;
   accent-color: #f7c873;
   cursor: pointer;
   margin-left: 0.2rem;
